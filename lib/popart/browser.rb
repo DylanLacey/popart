@@ -13,11 +13,19 @@ module Popart
         @browser = SeleniumSession.new capabilities
 
         begin
-          yield @browser
+          val = yield @browser
         rescue
-          ## TODO SOMETHING LESS CRAP HERE
+
+          # TODO SOMETHING LESS CRAP HERE
         end
       end
+    end
+
+    def filename
+      filename = capabilities["browserName"] + '_' + capabilities["version"] + '_' + capabilities["platform"] + '.png'
+      filename.gsub! " ", "-"
+
+      filename
     end
   end
 end
