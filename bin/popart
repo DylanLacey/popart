@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+require "popart"
+
+config = Popart::Config.new
+config.initial_config
+
+browsers = config.browsers.map { |b| Popart::Browser.new b }
+
+STDOUT.puts "Fetching screenshots of #{config.site} and writing them to #{config.output_directory}"
+
+screenshots = browsers.map do |browser|
+  screenshot = browser.perform do |session|
+    session.navigate.to config.site
+    session.screenshot_as :png
+  end
+
+  filename = browser.capabilities[:browserName] + '_' + browser.capabilities[:version] + '_' + browser.capabilities[:platform] + '.png'
+  filename.gsub! " ", "-"
+
+  File.open((File.join config.output_directory, filename), 'w') do |file|
+    file.write screenshot
+  end
+end

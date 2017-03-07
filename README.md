@@ -1,2 +1,40 @@
-# popart
-Generate screenshots in diverse browsers
+# Popart
+
+Use Sauce Labs to generate screenshots for your site across a range of browsers.
+
+## Installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'popart'
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install popart
+
+## Usage
+
+Currently, Popart only supports screenshots of a single page directly accessible by URL (with or without Sauce Connect).
+
+To use Popart, install it (as above) then
+
+`popart url_to_screenshot`.
+
+This will cause Popart to take a shot with the default browsers (Chrome and Firefox Latest on Windows 10) and save them to `./screenshots`.
+
+## Development
+
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake rspec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/popart. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+
