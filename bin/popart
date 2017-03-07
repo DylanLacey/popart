@@ -14,7 +14,7 @@ screenshots = browsers.map do |browser|
     session.screenshot_as :png
   end
 
-  filename = browser.capabilities[:browserName] + '_' + browser.capabilities[:version] + '_' + browser.capabilities[:platform] + '.png'
+  filename = browser.capabilities["browserName"] + '_' + browser.capabilities["version"] + '_' + browser.capabilities["platform"] + '.png'
   filename.gsub! " ", "-"
 
   File.open((File.join config.output_directory, filename), 'w') do |file|

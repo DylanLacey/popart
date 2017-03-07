@@ -1,4 +1,5 @@
 require "pathname"
+require "yaml"
 
 module Popart
   class Config
@@ -7,8 +8,8 @@ module Popart
 
     def default_browsers
       [
-        {:browserName => 'Chrome', :platform => "Windows 10", :version => "latest"},
-        {:browserName => 'Firefox', :platform => "Windows 10", :version => "latest"}
+        {"browserName" => 'Chrome', "platform" => "Windows 10", "version" => "latest"},
+        {"browserName" => 'Firefox', "platform" => "Windows 10", "version" => "latest"}
       ]
     end
 
@@ -26,11 +27,12 @@ module Popart
     end
 
     def load_from_file filename
-      config_hash = YAML.parse filename
+      filedata = File.read filename
+      config_hash = YAML.load(filedata)
 
-      @browsers = [config_hash[:browsers]].flatten
-      @output_directory = config_hash[:output_directory]
-      @site = config_hash[:site]
+      @browsers = [config_hash["browsers"]].flatten
+      @output_directory = config_hash["output_directory"]
+      @site = config_hash["site"]
     end
 
     def set_defaults

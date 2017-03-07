@@ -28,6 +28,12 @@ To use Popart, install it (as above) then
 
 This will cause Popart to take a shot with the default browsers (Chrome and Firefox Latest on Windows 10) and save them to `./screenshots`.
 
+### Configuring browsers and output location
+
+To configure further, copy `example_config.yaml` to your system, then customise to suit your requirements.  Pass config files to Popart like so:
+
+`popart url_to_screenshot location_of_config_file`
+
 ## Support
 As an open source project, this is a volunteer effort. Be kind to the authors and maintainers, and expect support commensurate with what this product cost you: Nothing.
 
@@ -41,5 +47,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/popart. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[DylanLacey]/popart. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 

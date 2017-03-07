@@ -1,0 +1,9 @@
+# Add a new line for each browser desired
+#
+# Values can be taken from the Platform Configurator: https://wiki.saucelabs.com/display/DOCS/Platform+Configurator#/
+# Use the key names and values from the "Python" config
+browsers:
+  - { browserName: "Chrome", platform: "Windows 7", version: "latest"}
+  - { browserName: "Safari", platform: "OS X 10.12", version: "latest"}
+  - { browserName: "Chrome", platform: "Linux", version: "45"}
+output_directory: "./output"
