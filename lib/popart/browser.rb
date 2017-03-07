@@ -13,7 +13,7 @@ module Popart
         @browser = SeleniumSession.new capabilities
 
         begin
-          val = yield @browser
+          yield @browser
         rescue
 
           # TODO SOMETHING LESS CRAP HERE

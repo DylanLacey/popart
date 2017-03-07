@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    popart (0.1.2)
+    popart (0.2.0)
       parallel
       selenium-webdriver
 

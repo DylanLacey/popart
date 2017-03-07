@@ -2,6 +2,8 @@
 
 Use Sauce Labs to generate screenshots for your site across a range of browsers.
 
+Popart works fast!  It can use as much of your Sauce Labs concurrency as required (default is 5 concurrent sessions).
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -32,7 +34,7 @@ To run:
 
 This will cause Popart to take a shot with the default browsers (Chrome and Firefox Latest on Windows 10) and save them to `./screenshots`.
 
-### Configuring browsers and output location
+### Configuring browsers, threadcount and output location
 
 To configure further, copy `example_config.yaml` to your system, then customise to suit your requirements.  Pass config files to Popart like so:
 
@@ -54,6 +56,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[DylanLacey]/popart. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 ## TODO
-* Parallel fetching according to account concurrency limits
+* Check account concurrency limit and use that by default
 * Error handling.  Any.
 

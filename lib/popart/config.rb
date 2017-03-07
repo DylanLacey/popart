@@ -4,7 +4,7 @@ require "yaml"
 module Popart
   class Config
 
-    attr_accessor :browsers, :output_directory, :site
+    attr_accessor :browsers, :output_directory, :site, :thread_count
 
     def default_browsers
       [
@@ -15,6 +15,10 @@ module Popart
 
     def default_output_directory
       './screenshots'
+    end
+
+    def default_thread_count
+      5
     end
     
     def initial_config
@@ -33,11 +37,13 @@ module Popart
       @browsers = [config_hash["browsers"]].flatten
       @output_directory = config_hash["output_directory"]
       @site = config_hash["site"]
+      @thread_count = config_hash["thread_count"]
     end
 
     def set_defaults
       @browsers ||= default_browsers
       @output_directory ||= default_output_directory
+      @thread_count ||= default_thread_count
       set_site(@site ||= ARGV[0])
 
       @output_directory = Pathname.new @output_directory
