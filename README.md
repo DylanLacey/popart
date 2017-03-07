@@ -28,6 +28,11 @@ To use Popart, install it (as above) then
 
 This will cause Popart to take a shot with the default browsers (Chrome and Firefox Latest on Windows 10) and save them to `./screenshots`.
 
+## Support
+As an open source project, this is a volunteer effort. Be kind to the authors and maintainers, and expect support commensurate with what this product cost you: Nothing.
+
+This is not an official Sauce Labs product.  Do not ask their support department to assist with any issues; They are not responsible.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake rspec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
