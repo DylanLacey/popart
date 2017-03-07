@@ -22,7 +22,11 @@ Or install it yourself as:
 
 Currently, Popart only supports screenshots of a single page directly accessible by URL (with or without Sauce Connect).
 
-To use Popart, install it (as above) then
+To use Popart, install it (as above).
+
+Set the `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` environment variables to the values for your account.
+
+To run: 
 
 `popart url_to_screenshot`.
 
@@ -48,4 +52,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[DylanLacey]/popart. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+
+## TODO
+* Parallel fetching according to account concurrency limits
+* Error handling.  Any.
 
