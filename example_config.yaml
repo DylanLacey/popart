@@ -7,3 +7,4 @@ browsers:
   - { browserName: "Safari", platform: "OS X 10.12", version: "latest"}
   - { browserName: "Chrome", platform: "Linux", version: "45"}
 output_directory: "./output"
+thread_count: 3

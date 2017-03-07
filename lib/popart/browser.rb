@@ -27,5 +27,12 @@ module Popart
 
       filename
     end
+
+    def cleanup
+      @browser.quit if @browser
+    rescue
+    ensure
+      @browser = nil
+    end
   end
 end
