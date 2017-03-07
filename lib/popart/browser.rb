@@ -12,7 +12,11 @@ module Popart
       unless @browser
         @browser = SeleniumSession.new capabilities
 
-        yield @browser
+        begin
+          yield @browser
+        rescue
+          ## TODO SOMETHING LESS CRAP HERE
+        end
       end
     end
   end
